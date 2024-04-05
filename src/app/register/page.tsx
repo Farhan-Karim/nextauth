@@ -1,7 +1,15 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 
 const Register = () => {
+
+  const handleRegistration = async(e:any) =>{
+    e.preventDefault();
+    const email =  e.target[0].value;
+    const password = e.target[1].value;
+    console.log("email, password")
+  }
   return (
     <main className="flex lg:h-[100wh]">
       <div className="w-full lg:w-[60%] p-8 md:p-14 flex items-center justify-center lg:justify-start">
@@ -14,7 +22,7 @@ const Register = () => {
           <div className="bg-black text-white w-full py-4  mt-10 rounded-full transition-transform hover:bg-black/[0.5] active:scale-90 flex justify-center items-center gap-4 cursor-pointer group:">
             <span className="font-medium text-white group-hover:text-white">Login with Github</span>
           </div>
-          <form action="">
+          <form onSubmit={handleRegistration}>
             <div className="mt-10 pl-1 flex flex-col">
               <label htmlFor="">Email</label>
                 <input type="email" required className="font-medium border-b border-black p-4 outline-0"/>
@@ -28,7 +36,7 @@ const Register = () => {
         </div>
       </div>
       <div className="w-[40%]  bg-slate-400 bg-cover bg-right-top hidden lg:block"
-      style={{backgroundImage: "url('/bok.jpg')"}}></div>
+      style={{backgroundImage: "url('/book.jpg')"}}></div>
     </main>
   );
 };

@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import { unique } from "next/dist/build/utils";
-import { type } from "os";
+// import { unique } from "next/dist/build/utils";
+// import { type } from "os";
 const { Schema } = mongoose;
 const userSchema = new Schema(
   {
